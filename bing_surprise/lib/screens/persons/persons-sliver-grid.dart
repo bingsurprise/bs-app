@@ -23,7 +23,7 @@ class PersonsSliverGrid extends StatelessWidget {
             alignment: Alignment.center,
             color: Colors.teal[100 * (index % 9)],
             child: RaisedButton(
-              child: Text('persion $index'),
+              child: Text('person $index'),
               onPressed: () => Navigator.pushNamed(context, '/gift'),
             )
           );
