@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './persons-sliver-grid.dart';
 
 class PersionsList extends StatelessWidget {
   @override
@@ -7,13 +8,11 @@ class PersionsList extends StatelessWidget {
       appBar: AppBar(
         title: Text('为TA准备惊喜？')
       ),
-      body: Center(
-        child: RaisedButton(
-          child: Text('+'),
-          onPressed: () {
-            Navigator.pushNamed(context, '/gift');
-          }
-        ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+          PersonsSliverGrid(),
+          
+        ],
       )
     );
   }
