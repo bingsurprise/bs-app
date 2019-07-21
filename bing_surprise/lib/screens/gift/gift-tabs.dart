@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './recommendation.dart';
+import './favorite.dart';
+import './profile.dart';
 
 class GiftTabs extends StatefulWidget {
   @override
@@ -7,9 +10,15 @@ class GiftTabs extends StatefulWidget {
 
 class _GiftTabsState extends State<GiftTabs> with SingleTickerProviderStateMixin {
   final List<Tab> _giftTabs = <Tab>[
-    Tab(text: '礼物推荐'),
-    Tab(text: '收藏夹'),
-    Tab(text: '个人中心'),
+    Tab(
+      text: '礼物推荐',
+    ),
+    Tab(
+      text: '收藏夹',
+    ),
+    Tab(
+      text: '个人中心',
+    ),
   ];
 
   TabController _tabController;
@@ -41,9 +50,11 @@ class _GiftTabsState extends State<GiftTabs> with SingleTickerProviderStateMixin
       ),
       body: TabBarView(
         controller: _tabController,
-        children: _giftTabs.map((Tab tab) => Center(
-          child: Text(tab.text),
-        )).toList(),
+        children: [
+          GiftRecommendation(),
+          GiftFavorite(),
+          Profile(),
+        ],
       ),
     );
   }
