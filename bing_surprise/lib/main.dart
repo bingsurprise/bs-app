@@ -1,3 +1,4 @@
+import 'package:bing_surprise/screens/gift/gift-detail.dart';
 import 'package:flutter/material.dart';
 import './screens/persons/persons-list.dart';
 import './screens/persons/new-person.dart';
@@ -11,6 +12,7 @@ void main() {
         '/': (context) => PersionsList(),
         '/person/new': (context) => AddNewPerson(),
         '/gift': (context) => GiftIndex(),
+        '/giftdetail': (context) => GiftDetail(),
       },
     )
   );
