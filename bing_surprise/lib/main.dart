@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './screens/persons/persons-list.dart';
+import './screens/persons/new-person.dart';
 import './screens/gift/index.dart';
 
 void main() {
@@ -8,6 +9,7 @@ void main() {
       initialRoute: '/',
       routes: {
         '/': (context) => PersionsList(),
+        '/person/new': (context) => AddNewPerson(),
         '/gift': (context) => GiftIndex(),
       },
     )
